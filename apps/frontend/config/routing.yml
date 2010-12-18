@@ -1,0 +1,132 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: inscricao, action: index }
+
+
+
+
+# generic rules
+buscar_vestibular:
+  url: /vestibular/buscar/:id_vestibular
+  param: { module: vestibular, action: index }
+
+relatorio_inscricoes:
+  url: /relatorio/inscricoes/:id_vestibular
+  param: { module: relatorios, action: vestibulandosInscritos }
+
+relatorio_resultadovestibular:
+  url: /relatorio/resultadovestibular/:id_vestibular
+  param: { module: relatorios, action: resultadoVestibular }
+  
+relatorio_vestibulandoxsalas:
+  url: /relatorio/vestibulandosxsalas/:id_vestibular
+  param: { module: relatorios, action: vestibulandosXSalas }
+ver_relatorios:
+  url: /relatorios/:id_vestibular
+  param: { module: relatorios, action: verRelatorios }
+
+alocar_vestibulandos:
+  url: /alocarvestibulandos/vestibular/:id_vestibular
+  param: { module: sala, action: alocarVestibulandos }
+
+list_alocar_vestibulandos:
+  url: /alocarvestibulandos/vestibular/
+  param: { module: sala, action: listVestibulares }
+
+curso:
+  url: /curso
+  param: { module: curso, action: index }
+sala:
+  url: /sala
+  param: { module: sala, action: index }
+
+vestibular:
+  url: /vestibular
+  param: { module: vestibular, action: index }
+
+show_concorrencia_curso_vestibular:
+  url: /vestibular/show/*/concorrencia/
+  param: { module: vestibular, action: showConcorrencia }
+
+concorrencia_vestibular:
+  url: /vestibular/concorrencia
+  param: { module: vestibular, action: concorrencia }
+
+deletar_curso_vestibular:
+  url: /vestibular/retirarcurso/*
+  param: { module: vestibular, action: RetireCursoDoVestibular }
+
+editar_curso_vestibular:
+  url: /vestibular/edit/*/curso/
+  param: { module: vestibular, action: cursosEdit }
+
+editar_vestibular:
+  url: /vestibular/edit/*
+  param: { module: vestibular, action: edit }
+
+update_curso_vestibular:
+  url: /vestibular/update/*/curso
+  param: { module: vestibular, action: CursosUpdate }
+
+update_vestibular:
+  url: /vestibular/update/*
+  param: { module: vestibular, action: update }
+
+comprovante_inscricao:
+  url: /inscricao/comprovante/*
+  param: { module: inscricao, action: comprovante }
+
+inscricao:
+  url: /inscricao
+  param: { module: inscricao, action: index }
+
+instituicao_dados_show:
+  url: /instituicao/:id_instituicao
+  param: { module: instituicao, action: show }
+
+vestibular_vestibulando:
+  url: /vestibulando/vestibular
+  param: { module: inscricao, action: listVestibulares}
+
+list_vestibulando_vestibular:
+  url: /vestibulando/vestibular/:id_vestibular/list
+  param: { module: inscricao, action: listVestibularCursos }
+
+lancar_pontuacao:
+   url: /vestibulando/vestibular/curso/:id_vestibular_curso/lancarpontuacao
+   param: { module: inscricao, action: lancarPontuacao }
+
+update_lancar_pontuacao:
+   url: /vestibulando/vestibular/lancarpontuacao/*
+   param: { module: inscricao, action: updateLancarPontuacao }
+
+list_inscricoes_vestibular:
+  url: /vestibular/:id_vestibular/inscricoes/*
+  param: { module: inscricao, action: listarInscricoesPorVestibular }
+
+gerar_resultados:
+  url: /vestibular/:id_vestibular/gerarresultados
+  param: { module: vestibular, action: gerarResultados }
+
+process_gerar_resultados:
+  url: /vestibular/gerarresultados/process
+  param: { module: vestibular, action: processGerarResultados }
+
+#vestibular_novo:
+#  url: /vestibular/:id_vestibular
+#  param: { module: vestibular, action:new }
+
+
+
+
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

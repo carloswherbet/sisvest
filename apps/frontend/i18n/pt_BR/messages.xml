@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+ <file source-language="EN" target-language="pt" datatype="plaintext" original="messages" date="2010-03-26T17:27:42Z" product-name="messages">
+   <header/>
+   <body>
+     <trans-unit id="1">
+       <source>Required.</source>
+       <target>é obrigatório e não pode ser deixado em branco</target>
+     </trans-unit>
+   </body>
+ </file>
+</xliff>
