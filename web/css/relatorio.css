@@ -1,0 +1,102 @@
+body {
+    background-image:none;
+    background-repeat:repeat-x;
+    font-family:aria,sans-serif;
+    font-size:12px;
+    margin:auto;
+    width:760px;
+    text-align: center;
+    
+}
+#relatorio {
+    width: 760px;
+}
+
+.reprovado {
+    color: #464646;
+    text-align: center;
+}
+
+a:hover {
+    font-weight: bold;
+
+}
+.aprovado {
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+}
+table {
+	border: 1px solid #333333;
+	width: 90%;
+	margin: auto;
+	font-size: 10px;
+        padding: 0px;
+        border-collapse: collapse;
+}
+#topo {
+      width: 760px;
+
+}
+
+
+ tr {
+    background-color: #FFFFFF !important;
+    border: 1px solid #000 !important;
+    border-spacing: inherit !important;
+    color: #000000 !important;
+    padding: 0px !important;
+
+    
+
+}
+
+td {
+    text-align: left;
+    padding: 0px;
+    border: 1px solid #333333;
+
+}
+th {
+    
+    background-color: #cccccc;
+    padding: 0px;
+    border: 1px solid #000 !important;
+
+}
+
+ .border-bottom {
+    border-collapse: collapse;
+    border-bottom: 1px #588550 dotted;
+    width: 120px;
+}
+
+#relatorio-title {
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+    top:16px;
+
+}
+
+.tdnum {
+    font-style: italic;
+    color: #666666;
+    width: 20px;
+    text-align: center;
+}
+.tdnuminscricao, .tdcurso, .tdcpf {
+    text-align: center;
+
+}
+
+h2 {
+    margin-top:-5px;
+    text-align:center;
+
+}
+
+#logo {
+   position:absolute;
+
+}

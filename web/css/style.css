@@ -1,0 +1,30 @@
+
+/* 
+	LEVEL ONE
+*/
+ul.dropdown                         { position: relative; }
+ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; background: #3b4380; }
+ul.dropdown a:hover		            { color: #588550; }
+ul.dropdown a:active                { color: #ffa500; }
+ul.dropdown li a                    { display: block; padding: 2px 8px; border-right: 1px solid #333;
+	 								  color: #fff; font-size: 12px;font-weight: normal; }
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { background: #588550; color: #fff; position: relative; }
+ul.dropdown li.hover a              { color: #fff; }
+
+
+/* 
+	LEVEL TWO
+*/
+ul.dropdown ul                                  { width: 160px; visibility: hidden; position: absolute; top: 100%; left: -40px; margin-top: 1px }
+ul.dropdown ul li 				{ font-weight: normal; background: #3b4380; color: #000; border-bottom: 1px solid #ccc; float: none;padding-top: 3px ; }
+									  
+                                                /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a                             { border-right: none; width: 100%; display: inline-block; }
+
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul                               { left: 135px; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }

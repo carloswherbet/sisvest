@@ -1,0 +1,63 @@
+all:
+  br_cep:
+
+    # Buscar na base local (Cep Brasil importado)
+    # Utilizar format: republicavirtual
+    local_search:  false
+    
+    # Array com lista de IPs que podem acessar remotamente
+    # ou false para acesso público
+    # Exemplo
+    #client_ips: ['200.217.64.146', '200.217.64.147']
+    client_ips: false
+
+    # Fonte: http://ceplivre.pc2consultoria.com
+    # -----------------------------------------
+    format: ceplivre
+
+    remote_url:    'http://ceplivre.pc2consultoria.com/index.php'
+    remote_query:  'module=cep&formato=xml&cep='
+
+    # Do not change remote_fields to http://rceplivre.pc2consultoria.com
+    remote_fields:
+      resultado:       sucesso
+      tipo_logradouro: tipo_logradouro
+      logradouro:      logradouro
+      uf:              estado_sigla
+      uf_descricao:    estado
+      cidade:          cidade
+      bairro:          bairro
+      cep:             cep
+      codigo_ibge:     codigo_ibge
+
+    form_fields:
+      logradouro:      logradouro
+      estado_sigla:    uf
+      cidade:          cidade
+      bairro:          bairro
+      cep:             cep
+      codigo_ibge:     codibge
+
+    # Fonte: http://republicavirtual.com.br
+    # -------------------------------------
+#    format: republicavirtual
+#    remote_url:    'http://republicavirtual.com.br/web_cep.php'
+#    remote_query:  'formato=json&cep='
+#
+#    # Do not change remote_fields to http://rceplivre.pc2consultoria.com
+#    remote_fields:
+#      resultado:       resultado
+#      uf:              uf
+#      cidade:          cidade
+#      bairro:          bairro
+#      tipo_logradouro: tipo_logradouro
+#      logradouro:      logradouro
+#      cep:             cep
+#    form_fields:
+#      uf:              uf
+#      cidade:          cidade
+#      bairro:          bairro
+#      tipo_logradouro: tipo_logradouro
+#      logradouro:      logradouro
+#      cep:             cep
+

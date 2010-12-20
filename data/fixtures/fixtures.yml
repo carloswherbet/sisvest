@@ -1,0 +1,39 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+
+
+CURSO:
+  ADS_manha:
+    nm_curso: Análise e Desenvolvimento de Sistemas - Manhã
+    te_cargahoraria: 300 hs
+  ADS_noite:
+    nm_curso: Análise e Desenvolvimento de Sistemas - Noite
+    te_cargahoraria: 300 hs
+  redes_manha:
+    nm_curso: Redes de Computadores - Manhã
+    te_cargahoraria: 300 hs
+  redes_noite:
+    nm_curso: Redes de Computadores - Noite
+    te_cargahoraria: 300 hs
+  turismo_noite:
+    nm_curso: Turismo - Noite
+    te_cargahoraria: 300 hs
+  farmacia_noite:
+    nm_curso: Farmácia - Noite
+    te_cargahoraria: 300 hs
+
